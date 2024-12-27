@@ -10,5 +10,6 @@ export const api = new sst.aws.ApiGatewayV2("Api", {
   }
 });
 
+api.route("GET /notes", "packages/functions/src/list.main");
 api.route("POST /notes", "packages/functions/src/create.main");
 api.route("GET /notes/{id}", "packages/functions/src/get.main");
